@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type ="text/css" href="style.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<title>BMI CALCULATOR</title>
+<script language="JavaScript">
+    function calculateBmi() {
+    var weight = document.bmiForm.weight.value;
+    var height = document.bmiForm.height.value;
+    
+    if(weight > 0 && height > 0){
+    var  finalBmi = weight/(height/100*height/100)
+    document.bmiForm.bmi.value = finalBmi
+    if( finalBmi > 40){
+        document.bmiForm.meaning.value="Your Index Value is in Obese Class III";
+       } else if ( finalBmi >= 35){
+           document.bmiForm.meaning.value="Your Index Value is in Obese Class II";
+       } else if( finalBmi >=30){
+           document.bmiForm.meaning.value="Your Index Value is in Obese Class I";
+       } else if( finalBmi >= 25){
+           document.bmiForm.meaning.value="Your Index Value is in Overweight";
+       } else if( finalBmi >= 18.5){
+          document.bmiForm.meaning.value ="Your Index Value is in Normal";
+       } else if ( finalBmi >= 17){
+           document.bmiForm.meaning.value="Your Index Value is in Mild Thinness";
+       } else if ( finalBmi >= 16){
+         document.bmiForm.meaning.value="Your Index Value is in Moderate Thinness";
+       } else if ( finalBmi <= 16) {
+           document.bmiForm.meaning.value="Your Index Value is in Severe Thinness";
+       }
+
+        }
+        else{
+        alert("Please Fill in everything correctly")
+        }
+    }
+</script>
+</head>
+<body class="bmi" >
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="home.html"><i class="fa fa-home"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">  
+        <ul class="navbar-nav mr-auto"></ul>		  
+        <form class="form-group form-inline my-2 my-lg-0">
+            <a href="detail.html"><input class="form-control mr-sm-2"  type="button" value="Meal Tracker"  /></a>
+            <a href="bmi.html"><input class="form-control mr-sm-2"  type="button" value="BMI Calculator"  /></a>
+            <a href="contactme.html"><input class="form-control mr-sm-2"  type="button" value="Contact Us"  /></a>
+          </form>
+        </div>
+    </nav>
+    <div class="container">       
+   <div class="card my-5 p-3" style="width: 25rem; height:33rem">
+    <div class="calc card-body form-group">
+        
+        <form name="bmiForm" class="text-dark">
+            Your Weight(kg): <input class="form-control" type="text" name="weight" size="10" /><br />
+            Your Height(cm): <input type="text" class="form-control" name="height" size="10" /><br />
+            <input
+                type="button"
+                value="Calculate BMI"
+                onClick="calculateBmi()"
+                class="form-control"
+            /><br />
+            Your BMI: <input type="text" name="bmi" size="10" class="form-control"/><br />
+            This Means: <input type="text" name="meaning" size="25" class="form-control"/><br />
+            <input type="reset" value="Reset" class="form-control"/>
+        </form>
+    </div>   
+  </div>
+      
+    </div>
+
+    
+</body>
+</html>
+
+    

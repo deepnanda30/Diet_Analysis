@@ -1,0 +1,46 @@
+.home{
+    background-image: url('home.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+.contact {
+	background-image: url("one.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.content{
+    color: rgb(127, 250, 223);
+    justify-content: center;
+}
+.pic{
+    background-image: url('details.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed
+}
+#someid {
+	opacity: 0.7;
+}
+
+i {
+	color: black;
+}
+.picc{
+    height: 10%;
+    width: 100%;
+}
+.card{
+    opacity: 0.7;
+}
+.bmi{
+    background-image: url('bmi.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed
+}
+.calc{
+    color: white;
+}
